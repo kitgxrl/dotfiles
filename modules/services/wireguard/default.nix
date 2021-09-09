@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, lib, ... }:
 
 let
   wgSecrets = "/home/rain/.secrets/wireguard";
@@ -17,10 +17,10 @@ in
 
       peers = [
         {
-          publicKey = builtins.readFile pubKeyP;
+          publicKey = (lib.strings.fileContents pubKeyP);
           presharedKeyFile = preKeyP;
           allowedIPs = [ "0.0.0.0/0" "::/0" ];
-          endpoint = builtins.readFile ip;
+          endpoint = (lib.strings.fileContents ip);
           persistentKeepalive = 25;
         }
       ];
