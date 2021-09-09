@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+hc() { herbstclient "$@"; }
+export -f hc
+
+export TERMINAL=alacritty
+
+hc emit_hook reload
+
+# Execute configs
+
+./keybinds
+./theme
+./misc
+
+# Autostart
+
+~/.fehbg
+# picom &

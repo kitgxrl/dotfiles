@@ -1,0 +1,1 @@
+<html><body>You are being <a href="https://raw.githubusercontent.com/hlissner/doom-emacs/develop/core/templates/config.example.el">redirected</a>.</body></html>

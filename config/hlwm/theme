@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+# Init
+
+hc attr theme.tiling.reset 1
+hc attr theme.floating.reset 1
+
+# General
+
+hc set frame_gap 0
+hc set frame_transparent_width 0
+hc set always_show_frame off
+hc set frame_border_width 0
+hc set frame_padding 0
+
+hc set window_gap 15
+
+# Colors
+
+hc attr theme.active.color '#96a7c4'
+hc attr theme.normal.color '#b2c2af'
+hc attr theme.urgent.color '#b56e50'
+
+# Padding
+
+hc attr theme.padding_left 20
