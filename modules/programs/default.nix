@@ -1,4 +1,4 @@
-{ pkgs, user, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -13,8 +13,12 @@
     chromium
     neovim-nightly
     cachix
-    emacs
-    ripgrep fd # for doom-emacs primarily
+    ((emacsPackagesNgGen emacs).emacsWithPackages (epkgs: [
+      epkgs.vterm
+    ]))
+    pinentry-emacs
+    ripgrep fd libtool libvterm # for doom-emacs primarily
+    gcc gnumake cmake # build tools
   ];
 
   user.programs.gpg.enable = true;
