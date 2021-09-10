@@ -19,6 +19,14 @@ Running:
 - MPD (Music Player Daemon)
 - Jellyfin (Media Server)
 
+TODO
+----
+- [ ] Convert more to nix
+  - [ ] Neovim
+  - [ ] Emacs
+  - [ ] Ncmpcpp
+- [ ] Refactor/clean up modules
+
 Screenshots
 -----------
 > TODO: Add more screenshots
