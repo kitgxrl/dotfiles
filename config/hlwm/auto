@@ -4,6 +4,7 @@ hc() { herbstclient "$@"; }
 export -f hc
 
 export TERMINAL=alacritty
+export LAUNCHER=dmenu_run
 
 hc emit_hook reload
 
