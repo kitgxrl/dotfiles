@@ -36,5 +36,8 @@ Screenshots
 "Busy":
 ![fake_busy](./screenshots/fake_busy.png)
 
+Ncmpcpp:
+![ncmpcpp](./screenshots/ncmpcpp.png)
+
 Doom Emacs:
 ![doom_emacs](./screenshots/doom_emacs.png)
