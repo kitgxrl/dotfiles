@@ -14,6 +14,8 @@ Programs:
   - Mainly used for config editing, or stuff where it'd be unreasonable to use emacs
 - (Doom) Emacs
   - Used for working on actual (useless) projects
+- Ncmpcpp
+  - Used as a front-end for MPD (Music Player Daemon)
 
 Running:
 - MPD (Music Player Daemon)
