@@ -5,13 +5,19 @@
     ./shell.nix
     ./ssh.nix
     ./git.nix
+    ./ncmpcpp.nix
   ];
 
   user.home.packages = with pkgs; [
     qbittorrent
+    ytmdl
     discord-canary
     chromium
     neovim-nightly
+    pavucontrol
+    ueberzug
+    ffmpeg
+    mpc_cli
     cachix
     ((emacsPackagesNgGen emacs).emacsWithPackages (epkgs: [
       epkgs.vterm

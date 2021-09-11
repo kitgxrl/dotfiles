@@ -11,4 +11,6 @@
       auto_update "yes"
     '';
   };
+
+  user.home.sessionVariables = { "MPD_PORT" = "23498"; };
 }
