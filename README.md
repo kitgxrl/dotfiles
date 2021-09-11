@@ -24,7 +24,7 @@ TODO
 - [ ] Convert more to nix
   - [ ] Neovim
   - [ ] Emacs
-  - [ ] Ncmpcpp
+  - [X] Ncmpcpp
 - [ ] Refactor/clean up modules
 
 Screenshots
