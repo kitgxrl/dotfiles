@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# Just in case
+# export MPD_PORT=
+
+music_dir=/media/music
+cover=/tmp/mpd_cover.png
+
+# Get and save cover image
+ffmpeg -y -i "$(mpc --format "$music_dir"/%file% | head -n 1)" /tmp/mpd_cover.png &> /dev/null
+
+title=$(mpc --format %title% | head -n 1)
+artist=$(mpc --format %artist% | head -n 1)
+album=$(mpc --format %album% | head -n 1)
+
+body="By <i>$artist</i>\nOn <i>$album</i>"
+
+notify-send "$title" "$body" \
+    --icon=$cover

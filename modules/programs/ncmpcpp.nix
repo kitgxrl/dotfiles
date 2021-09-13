@@ -10,7 +10,7 @@
       mpd_port = 23498;
 
       # Startup
-      # execute_on_song_change="~/.config/ncmpcpp/ncmpcpp-ueberzug/ncmpcpp_cover_art.sh";
+      execute_on_song_change="~/dev/dotfiles/bin/mpd-notify";
 
       # General Apperance
 
