@@ -41,3 +41,9 @@ Ncmpcpp:
 
 Doom Emacs:
 ![doom_emacs](./screenshots/doom_emacs.png)
+
+Credits
+-------
+
+- Wallpaper: [さんどう線](https://www.pixiv.net/en/artworks/86523185) by [さしみん（たいら）](https://www.pixiv.net/en/users/11819)
+- Rofi Config comes from here: [adi1090x/rofi](https://github.com/adi1090x/rofi)
