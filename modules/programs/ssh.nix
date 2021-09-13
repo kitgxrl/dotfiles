@@ -1,7 +1,7 @@
 { config, ... }:
 
 {
-  config.user.programs.ssh = {
+  user.programs.ssh = {
     enable = true;
     matchBlocks = {
       "kira" = {
