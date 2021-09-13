@@ -6,25 +6,47 @@
     ./ssh.nix
     ./git.nix
     ./ncmpcpp.nix
+    ./qutebrowser.nix
   ];
 
   user.home.packages = with pkgs; [
-    qbittorrent
-    ytmdl
-    discord-canary
-    chromium
+    # Editors
     neovim-nightly
-    pavucontrol
-    ueberzug
-    ffmpeg
-    mpc_cli
-    cachix
+
     ((emacsPackagesNgGen emacs).emacsWithPackages (epkgs: [
       epkgs.vterm
     ]))
-    pinentry-emacs
-    ripgrep fd libtool libvterm # for doom-emacs primarily
-    gcc gnumake cmake # build tools
+
+    # Media
+
+    qbittorrent
+    ytmdl
+    pavucontrol
+
+    # Web
+
+    chromium
+
+    # Chat
+
+    discord-canary
+
+    # Tools
+    ffmpeg
+    mpc_cli
+    cachix
+    xdotool
+    gcc
+    gnumake
+    cmake
+    ripgrep
+    fd
+
+    # Misc / Libraries
+
+    libnotify
+    libtool
+    libvterm
   ];
 
   user.programs.gpg.enable = true;
