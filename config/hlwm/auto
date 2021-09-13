@@ -4,17 +4,17 @@ hc() { herbstclient "$@"; }
 export -f hc
 
 export TERMINAL=alacritty
-export LAUNCHER=dmenu_run
+export LAUNCHER=/home/rain/dev/dotfiles/config/rofi/bin/launcher_ribbon
 
 hc emit_hook reload
 
 # Execute configs
+CONFIG=/home/rain/dev/dotfiles/config/hlwm
 
-./keybinds
-./theme
-./misc
+$CONFIG/keybinds
+$CONFIG/theme
+$CONFIG/misc
 
 # Autostart
 
 ~/.fehbg
-# picom &

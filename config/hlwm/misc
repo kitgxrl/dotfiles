@@ -12,3 +12,6 @@ hc set tree_style '╾│ ├└╼─┐'
 
 # unlock, just to be sure
 hc unlock
+
+# It'll be the default X cursor otherwise
+xsetroot -cursor_name left_ptr

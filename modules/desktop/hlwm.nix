@@ -3,6 +3,6 @@
 {
   services.xserver.windowManager.herbstluftwm = {
     enable = true;
-    configFile = ../../config/hlwm/auto;
+    configFile = "/home/rain/dev/dotfiles/config/hlwm/auto";
   };
 }

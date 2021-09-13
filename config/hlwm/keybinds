@@ -86,8 +86,17 @@ for i in "${!tag_names[@]}" ; do
     fi
 done
 
+## Mouse
+
+hc mouseunbind --all
+
+hc mousebind $Mod-Button1 move
+hc mousebind $Mod-Button3 resize
+hc mousebind $Mod-Button2 zoom
+
 ## Misc
 
-# Screenshots
-kb Print         spawn sh -c "maim | xclip -selection clipboard -t image/png"
-kb Control-Print spawn sh -c "maim -s | xclip -selection clipboard -t image/png"
+# Menus
+kb $Mod-m spawn ~/dev/dotfiles/config/rofi/bin/android_mpd
+kb $Mod-Shift-p spawn ~/dev/dotfiles/config/rofi/bin/android_powermenu
+kb $Mod-Shift-s spawn ~/dev/dotfiles/config/rofi/bin/android_screenshot
