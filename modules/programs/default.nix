@@ -6,7 +6,6 @@
     ./ssh.nix
     ./git.nix
     ./ncmpcpp.nix
-    ./qutebrowser.nix
   ];
 
   user.home.packages = with pkgs; [
