@@ -6,7 +6,7 @@
     userName = "Rain";
     userEmail = "kitgxrl@protonmail.com";
     signing = {
-      key = "D822CBDB40A2C995";
+      key = "A0A80D82FC1867F4";
       signByDefault = true;
     };
   };
