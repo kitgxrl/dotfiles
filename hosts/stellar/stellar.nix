@@ -50,6 +50,8 @@
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 
+  services.xserver.videoDrivers = [ "nvidia" ];
+
   system.stateVersion = "21.05";
 }
 
