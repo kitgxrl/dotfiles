@@ -7,23 +7,24 @@
   inputs.hm.inputs.nixpkgs.follows = "nixpkgs";
 
   inputs.neovim-nightly.url = "github:nix-community/neovim-nightly-overlay";
-  inputs.doom-emacs.url = "github:vlaci/nix-doom-emacs";
 
-  outputs = inputs@{ self, nixpkgs, hm, neovim-nightly, doom-emacs, utils }:
+  outputs = inputs@{ self, nixpkgs, hm, neovim-nightly, utils }:
 
     utils.lib.mkFlake {
       inherit self inputs;
 
       channelsConfig.allowUnfree = true;
       
-      sharedOverlays = [ neovim-nightly.overlay ];
+      sharedOverlays = [ 
+        neovim-nightly.overlay
+        (self: super: { discord-canary = super.discord-canary.overrideAttrs (_: { src = builtins.fetchTarball "https://dl-canary.discordapp.net/apps/linux/0.0.130/discord-canary-0.0.130.tar.gz"; });})
+      ];
 
       hostDefaults.modules = [
         hm.nixosModules.home-manager
       ];
 
       hosts.stellar = {
-        specialArgs = { inherit doom-emacs; };
         modules = [
           ./hosts/stellar/stellar.nix
           ./hosts/stellar/hardware.nix
