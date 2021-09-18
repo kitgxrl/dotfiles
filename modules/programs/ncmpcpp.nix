@@ -3,7 +3,6 @@
 {
   user.programs.ncmpcpp = {
     enable = true;
-    package = (pkgs.ncmpcpp.override { visualizerSupport = true; });
     mpdMusicDir = "/media/music";
 
     settings = {
@@ -35,14 +34,6 @@
       
       now_playing_prefix = "$b";
       now_playing_suffix = "$/b";
-
-      # Album Art hack
-
-      # visualizer_look = "\"  \"";
-      # startup_screen = "visualizer";
-      # startup_slave_screen = "playlist";
-      # startup_slave_screen_focus = true;
-      # locked_screen_width_part = 32;
 
       # Misc
 
